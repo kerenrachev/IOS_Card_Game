@@ -193,6 +193,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="countdownLabel" destination="wzC-Iy-Mnb" id="Xbb-PO-uS3"/>
                         <outlet property="leftImage" destination="9PQ-ZS-x0P" id="kxu-Wt-tt9"/>
                         <outlet property="rightImage" destination="TKj-th-DGE" id="Rdv-Vz-y8U"/>
                     </connections>
