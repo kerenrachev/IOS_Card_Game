@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIb-s8-Vau">
-                                <rect key="frame" x="59" y="20" width="734" height="26.333333333333329"/>
+                                <rect key="frame" x="59" y="20" width="734" height="26.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
@@ -29,12 +29,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uo7-LY-JgH">
-                                <rect key="frame" x="309" y="66.333333333333329" width="234" height="28.666666666666671"/>
+                                <rect key="frame" x="309" y="66.333333333333314" width="234" height="28.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbb-WQ-l0F">
-                                <rect key="frame" x="365" y="114.99999999999999" width="122" height="34.333333333333329"/>
+                                <rect key="frame" x="365" y="115" width="122" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Submit">
                                     <backgroundConfiguration key="background">
@@ -147,16 +147,34 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="JtT-gG-bdi">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="JtT-gG-bdi">
                                 <rect key="frame" x="30" y="109" width="792" height="254"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TKj-th-DGE">
-                                        <rect key="frame" x="0.0" y="0.0" width="346" height="254"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="TKj-th-DGE">
+                                        <rect key="frame" x="0.0" y="0.0" width="263" height="254"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9PQ-ZS-x0P">
-                                        <rect key="frame" x="446" y="0.0" width="346" height="254"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b7D-g8-s8I">
+                                        <rect key="frame" x="363" y="0.0" width="66" height="254"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="timer.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="GLD-Gg-m0e">
+                                                <rect key="frame" x="0.0" y="0.0" width="66" height="221.66666666666666"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzC-Iy-Mnb">
+                                                <rect key="frame" x="0.0" y="221.66666666666669" width="66" height="32.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scissors.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="9PQ-ZS-x0P">
+                                        <rect key="frame" x="529" y="0.0" width="263" height="254"/>
                                     </imageView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="TKj-th-DGE" firstAttribute="width" secondItem="b7D-g8-s8I" secondAttribute="width" multiplier="4" id="jyd-Js-lWk"/>
+                                    <constraint firstItem="9PQ-ZS-x0P" firstAttribute="width" secondItem="TKj-th-DGE" secondAttribute="width" id="q6b-nY-aFG"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8IL-Al-P93"/>
@@ -174,6 +192,10 @@
                             <constraint firstItem="VZ0-8H-EPk" firstAttribute="top" secondItem="mfX-ka-kaO" secondAttribute="bottom" constant="10" id="tNu-Nj-Cqc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="leftImage" destination="9PQ-ZS-x0P" id="kxu-Wt-tt9"/>
+                        <outlet property="rightImage" destination="TKj-th-DGE" id="Rdv-Vz-y8U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q2n-Hs-J6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -182,7 +204,10 @@
     </scenes>
     <resources>
         <image name="left.jpeg" width="142" height="259"/>
+        <image name="paper.jpeg" width="262" height="213"/>
         <image name="right.jpeg" width="144" height="266"/>
+        <image name="scissors.jpeg" width="276" height="223"/>
+        <image name="timer.jpeg" width="512" height="512"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

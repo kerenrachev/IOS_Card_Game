@@ -18,6 +18,10 @@
 		CD3E762D2A30D64900AFCF94 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3E762C2A30D64900AFCF94 /* LocationManager.swift */; };
 		CD3E762F2A30E5EE00AFCF94 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3E762E2A30E5EE00AFCF94 /* GameViewController.swift */; };
 		CD3E76312A30EA0E00AFCF94 /* ViewGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3E76302A30EA0E00AFCF94 /* ViewGameController.swift */; };
+		CD3E76352A30F33600AFCF94 /* rock.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CD3E76322A30F33600AFCF94 /* rock.jpeg */; };
+		CD3E76362A30F33600AFCF94 /* paper.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CD3E76332A30F33600AFCF94 /* paper.jpeg */; };
+		CD3E76372A30F33600AFCF94 /* scissors.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CD3E76342A30F33600AFCF94 /* scissors.jpeg */; };
+		CD3E76392A30F3F200AFCF94 /* timer.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CD3E76382A30F3F200AFCF94 /* timer.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		CD3E762C2A30D64900AFCF94 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CD3E762E2A30E5EE00AFCF94 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		CD3E76302A30EA0E00AFCF94 /* ViewGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGameController.swift; sourceTree = "<group>"; };
+		CD3E76322A30F33600AFCF94 /* rock.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rock.jpeg; sourceTree = "<group>"; };
+		CD3E76332A30F33600AFCF94 /* paper.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper.jpeg; sourceTree = "<group>"; };
+		CD3E76342A30F33600AFCF94 /* scissors.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scissors.jpeg; sourceTree = "<group>"; };
+		CD3E76382A30F3F200AFCF94 /* timer.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timer.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,10 @@
 				CD3E76162A3082F600AFCF94 /* SceneDelegate.swift */,
 				CD3E76182A3082F600AFCF94 /* ViewController.swift */,
 				CD3E761A2A3082F600AFCF94 /* Main.storyboard */,
+				CD3E76332A30F33600AFCF94 /* paper.jpeg */,
+				CD3E76382A30F3F200AFCF94 /* timer.jpeg */,
+				CD3E76322A30F33600AFCF94 /* rock.jpeg */,
+				CD3E76342A30F33600AFCF94 /* scissors.jpeg */,
 				CD3E761D2A3082F700AFCF94 /* Assets.xcassets */,
 				CD3E76282A30A2EA00AFCF94 /* right.jpeg */,
 				CD3E762A2A30A37E00AFCF94 /* left.jpeg */,
@@ -140,11 +152,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD3E76352A30F33600AFCF94 /* rock.jpeg in Resources */,
 				CD3E76292A30A2EA00AFCF94 /* right.jpeg in Resources */,
+				CD3E76372A30F33600AFCF94 /* scissors.jpeg in Resources */,
 				CD3E762B2A30A37E00AFCF94 /* left.jpeg in Resources */,
 				CD3E76212A3082F700AFCF94 /* LaunchScreen.storyboard in Resources */,
+				CD3E76392A30F3F200AFCF94 /* timer.jpeg in Resources */,
 				CD3E761E2A3082F700AFCF94 /* Assets.xcassets in Resources */,
 				CD3E761C2A3082F600AFCF94 /* Main.storyboard in Resources */,
+				CD3E76362A30F33600AFCF94 /* paper.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
