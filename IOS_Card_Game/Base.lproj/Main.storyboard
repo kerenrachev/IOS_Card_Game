@@ -22,6 +22,12 @@
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZh-Yf-6H8">
+                                <rect key="frame" x="59" y="50" width="734" height="32.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uo7-LY-JgH">
                                 <rect key="frame" x="309" y="66.333333333333329" width="234" height="28.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -53,11 +59,15 @@
                         <constraints>
                             <constraint firstItem="jbb-WQ-l0F" firstAttribute="top" secondItem="uo7-LY-JgH" secondAttribute="bottom" constant="20.000000000000014" id="3BY-Un-nTi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uo7-LY-JgH" secondAttribute="trailing" constant="250" id="AcJ-zq-Wo1"/>
+                            <constraint firstItem="PZh-Yf-6H8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Ard-tW-2zI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uIb-s8-Vau" secondAttribute="bottom" constant="325.67000000000002" id="B0N-Oj-xTb"/>
                             <constraint firstItem="uo7-LY-JgH" firstAttribute="top" secondItem="uIb-s8-Vau" secondAttribute="bottom" constant="20" id="E3h-xJ-kRf"/>
                             <constraint firstItem="jbb-WQ-l0F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="306" id="FOs-Co-63j"/>
                             <constraint firstItem="uIb-s8-Vau" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IYX-9f-Sm1"/>
+                            <constraint firstItem="PZh-Yf-6H8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="In4-Sc-sc7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jbb-WQ-l0F" secondAttribute="bottom" constant="222.66999999999999" id="Ji0-hg-Dvg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PZh-Yf-6H8" secondAttribute="trailing" id="M8V-NO-cm3"/>
+                            <constraint firstItem="PZh-Yf-6H8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Mbw-6f-QMZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uIb-s8-Vau" secondAttribute="trailing" id="O0H-gN-hx3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uIb-s8-Vau" secondAttribute="bottom" constant="325.67000000000002" id="Tc5-7r-E3X"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jbb-WQ-l0F" secondAttribute="trailing" constant="306" id="l48-eW-45n"/>
@@ -72,6 +82,7 @@
                     <connections>
                         <outlet property="EnterName" destination="uo7-LY-JgH" id="h7S-W7-HZT"/>
                         <outlet property="SubmitNameButton" destination="jbb-WQ-l0F" id="dAo-R1-nNp"/>
+                        <outlet property="heyNameLabel" destination="PZh-Yf-6H8" id="gaZ-DT-7iP"/>
                         <outlet property="insertName" destination="uIb-s8-Vau" id="N9z-8i-oxN"/>
                         <outlet property="leftEart" destination="Ibk-8X-NAt" id="ZpM-qs-Vil"/>
                         <outlet property="rightEart" destination="lkQ-Px-tDY" id="UPh-fG-jnm"/>

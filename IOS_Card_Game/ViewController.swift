@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //private String name;
+    //private final double lng;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,9 +18,7 @@ class ViewController: UIViewController {
         hideInitialElements()
        
         initiateClickListeners()
-        
-       
-        
+    
     }
     
     
@@ -28,7 +28,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var EnterName: UITextField!
     @IBOutlet weak var insertName: UILabel!
- 
+    
+    @IBOutlet weak var heyNameLabel: UILabel!
+    
     @IBOutlet weak var SubmitNameButton: UIButton!
     
     @objc private func initiateClickListeners(){
@@ -49,15 +51,25 @@ class ViewController: UIViewController {
         
         leftEart.alpha = 0.0
         rightEart.alpha = 0.0
-        
+        heyNameLabel.isHidden = true
         EnterName.isHidden = true
         SubmitNameButton.isHidden = true
     }
-    @objc func insertNameClicked(){
-        
-    }
+   
     @objc func submitButtonClicked(){
-        leftEart.alpha = 1.0
+        processText()
+        //leftEart.alpha = 1.0
+    }
+    
+    private func processText(){
+        if let enteredText = EnterName.text{
+            let name = enteredText
+            EnterName.isHidden = true
+            SubmitNameButton.isHidden = true
+            heyNameLabel.isHidden = false
+            heyNameLabel.text = "Hey, " + name
+        }
+        
     }
     
 }
