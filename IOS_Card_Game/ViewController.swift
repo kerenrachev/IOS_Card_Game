@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Foundation
 class ViewController: UIViewController {
     
     //private String name;
@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        hideInitialElements()
+        readNameFromSharedPreferences(input: "username")
+        //hideInitialElements()
        
         initiateClickListeners()
     
@@ -33,6 +34,31 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var SubmitNameButton: UIButton!
     
+    private func readNameFromSharedPreferences(input: String){
+        let defaults = UserDefaults.standard
+        defaults.synchronize()
+        if let userNameSaved  = defaults.string(forKey: input){
+            hideAllElements()
+            heyNameLabel.isHidden = false
+            heyNameLabel.text = "Hey," + userNameSaved
+        }
+        else{
+            
+            hideAllElements()
+            insertName.isHidden = false
+        }
+    }
+    
+    private func hideAllElements(){
+        leftEart.alpha = 0.0
+        rightEart.alpha = 0.0
+        heyNameLabel.isHidden = true
+        EnterName.isHidden = true
+        insertName.isHidden = true
+        SubmitNameButton.isHidden = true
+        
+    }
+    
     @objc private func initiateClickListeners(){
         insertName.isUserInteractionEnabled = true
         let tapGesRecognizer = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
@@ -45,15 +71,6 @@ class ViewController: UIViewController {
         EnterName.isHidden = false
         SubmitNameButton.isHidden = false
         insertName.isHidden = true
-    }
-    
-    @objc private func hideInitialElements(){
-        
-        leftEart.alpha = 0.0
-        rightEart.alpha = 0.0
-        heyNameLabel.isHidden = true
-        EnterName.isHidden = true
-        SubmitNameButton.isHidden = true
     }
    
     @objc func submitButtonClicked(){
@@ -68,8 +85,15 @@ class ViewController: UIViewController {
             SubmitNameButton.isHidden = true
             heyNameLabel.isHidden = false
             heyNameLabel.text = "Hey, " + name
+            saveInSharedPreferences(key: "username", input: name)
         }
         
+    }
+    
+    private func saveInSharedPreferences(key: String, input:String){
+        let defaults = UserDefaults.standard
+        defaults.set(input, forKey: key)
+        defaults.synchronize()
     }
     
 }
