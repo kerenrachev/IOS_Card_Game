@@ -15,6 +15,9 @@
 		CD3E76212A3082F700AFCF94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3E761F2A3082F700AFCF94 /* LaunchScreen.storyboard */; };
 		CD3E76292A30A2EA00AFCF94 /* right.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CD3E76282A30A2EA00AFCF94 /* right.jpeg */; };
 		CD3E762B2A30A37E00AFCF94 /* left.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CD3E762A2A30A37E00AFCF94 /* left.jpeg */; };
+		CD3E762D2A30D64900AFCF94 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3E762C2A30D64900AFCF94 /* LocationManager.swift */; };
+		CD3E762F2A30E5EE00AFCF94 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3E762E2A30E5EE00AFCF94 /* GameViewController.swift */; };
+		CD3E76312A30EA0E00AFCF94 /* ViewGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3E76302A30EA0E00AFCF94 /* ViewGameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		CD3E76222A3082F700AFCF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD3E76282A30A2EA00AFCF94 /* right.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = right.jpeg; sourceTree = "<group>"; };
 		CD3E762A2A30A37E00AFCF94 /* left.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = left.jpeg; sourceTree = "<group>"; };
+		CD3E762C2A30D64900AFCF94 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		CD3E762E2A30E5EE00AFCF94 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		CD3E76302A30EA0E00AFCF94 /* ViewGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,9 @@
 				CD3E762A2A30A37E00AFCF94 /* left.jpeg */,
 				CD3E761F2A3082F700AFCF94 /* LaunchScreen.storyboard */,
 				CD3E76222A3082F700AFCF94 /* Info.plist */,
+				CD3E762C2A30D64900AFCF94 /* LocationManager.swift */,
+				CD3E762E2A30E5EE00AFCF94 /* GameViewController.swift */,
+				CD3E76302A30EA0E00AFCF94 /* ViewGameController.swift */,
 			);
 			path = IOS_Card_Game;
 			sourceTree = "<group>";
@@ -146,6 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD3E76312A30EA0E00AFCF94 /* ViewGameController.swift in Sources */,
+				CD3E762F2A30E5EE00AFCF94 /* GameViewController.swift in Sources */,
+				CD3E762D2A30D64900AFCF94 /* LocationManager.swift in Sources */,
 				CD3E76192A3082F600AFCF94 /* ViewController.swift in Sources */,
 				CD3E76152A3082F600AFCF94 /* AppDelegate.swift in Sources */,
 				CD3E76172A3082F600AFCF94 /* SceneDelegate.swift in Sources */,

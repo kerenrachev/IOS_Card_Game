@@ -24,15 +24,13 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var leftEart: UIImageView!
-    
     @IBOutlet weak var rightEart: UIImageView!
-    
     @IBOutlet weak var EnterName: UITextField!
     @IBOutlet weak var insertName: UILabel!
-    
     @IBOutlet weak var heyNameLabel: UILabel!
-    
     @IBOutlet weak var SubmitNameButton: UIButton!
+    
+    @IBOutlet weak var StartButton: UIButton!
     
     private func readNameFromSharedPreferences(input: String){
         let defaults = UserDefaults.standard
@@ -41,9 +39,10 @@ class ViewController: UIViewController {
             hideAllElements()
             heyNameLabel.isHidden = false
             heyNameLabel.text = "Hey," + userNameSaved
+            
+            getLocation()
         }
         else{
-            
             hideAllElements()
             insertName.isHidden = false
         }
@@ -86,6 +85,7 @@ class ViewController: UIViewController {
             heyNameLabel.isHidden = false
             heyNameLabel.text = "Hey, " + name
             saveInSharedPreferences(key: "username", input: name)
+            
         }
         
     }
@@ -94,6 +94,17 @@ class ViewController: UIViewController {
         let defaults = UserDefaults.standard
         defaults.set(input, forKey: key)
         defaults.synchronize()
+    }
+    
+    private func getLocation(){
+        if let currentLocation = LocationManager.shared.currentLocation {
+                    // Use the currentLocation here
+                    print("Current location: \(currentLocation)")
+        } else{
+            print("FUCK YOU BIITCH GO TO SLLEEP")
+            
+        }
+        
     }
     
 }
