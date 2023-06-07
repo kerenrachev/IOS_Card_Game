@@ -13,6 +13,8 @@
 		CD3E761C2A3082F600AFCF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3E761A2A3082F600AFCF94 /* Main.storyboard */; };
 		CD3E761E2A3082F700AFCF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD3E761D2A3082F700AFCF94 /* Assets.xcassets */; };
 		CD3E76212A3082F700AFCF94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3E761F2A3082F700AFCF94 /* LaunchScreen.storyboard */; };
+		CD3E76292A30A2EA00AFCF94 /* right.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CD3E76282A30A2EA00AFCF94 /* right.jpeg */; };
+		CD3E762B2A30A37E00AFCF94 /* left.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CD3E762A2A30A37E00AFCF94 /* left.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CD3E761D2A3082F700AFCF94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD3E76202A3082F700AFCF94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD3E76222A3082F700AFCF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD3E76282A30A2EA00AFCF94 /* right.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = right.jpeg; sourceTree = "<group>"; };
+		CD3E762A2A30A37E00AFCF94 /* left.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = left.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				CD3E76182A3082F600AFCF94 /* ViewController.swift */,
 				CD3E761A2A3082F600AFCF94 /* Main.storyboard */,
 				CD3E761D2A3082F700AFCF94 /* Assets.xcassets */,
+				CD3E76282A30A2EA00AFCF94 /* right.jpeg */,
+				CD3E762A2A30A37E00AFCF94 /* left.jpeg */,
 				CD3E761F2A3082F700AFCF94 /* LaunchScreen.storyboard */,
 				CD3E76222A3082F700AFCF94 /* Info.plist */,
 			);
@@ -125,6 +131,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD3E76292A30A2EA00AFCF94 /* right.jpeg in Resources */,
+				CD3E762B2A30A37E00AFCF94 /* left.jpeg in Resources */,
 				CD3E76212A3082F700AFCF94 /* LaunchScreen.storyboard in Resources */,
 				CD3E761E2A3082F700AFCF94 /* Assets.xcassets in Resources */,
 				CD3E761C2A3082F600AFCF94 /* Main.storyboard in Resources */,
