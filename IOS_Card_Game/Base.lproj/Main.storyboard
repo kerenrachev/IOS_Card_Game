@@ -69,6 +69,13 @@
                             <constraint firstItem="tih-oF-OYs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ye9-dD-HQb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="EnterName" destination="uo7-LY-JgH" id="h7S-W7-HZT"/>
+                        <outlet property="SubmitNameButton" destination="jbb-WQ-l0F" id="dAo-R1-nNp"/>
+                        <outlet property="insertName" destination="uIb-s8-Vau" id="N9z-8i-oxN"/>
+                        <outlet property="leftEart" destination="Ibk-8X-NAt" id="ZpM-qs-Vil"/>
+                        <outlet property="rightEart" destination="lkQ-Px-tDY" id="UPh-fG-jnm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
