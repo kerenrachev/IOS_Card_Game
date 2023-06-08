@@ -205,9 +205,9 @@
     </scenes>
     <resources>
         <image name="left.jpeg" width="142" height="259"/>
-        <image name="paper.jpeg" width="262" height="213"/>
+        <image name="paper.jpeg" width="131" height="208"/>
         <image name="right.jpeg" width="144" height="266"/>
-        <image name="scissors.jpeg" width="276" height="223"/>
+        <image name="scissors.jpeg" width="134" height="208"/>
         <image name="timer.jpeg" width="512" height="512"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
