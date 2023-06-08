@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIb-s8-Vau">
-                                <rect key="frame" x="59" y="20" width="734" height="26.333333333333314"/>
+                                <rect key="frame" x="59" y="20" width="734" height="26.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
@@ -29,12 +29,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uo7-LY-JgH">
-                                <rect key="frame" x="309" y="66.333333333333314" width="234" height="28.666666666666686"/>
+                                <rect key="frame" x="309" y="66.333333333333329" width="234" height="28.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbb-WQ-l0F">
-                                <rect key="frame" x="365" y="115" width="122" height="34.333333333333314"/>
+                                <rect key="frame" x="365" y="114.99999999999999" width="122" height="34.333333333333329"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Submit">
                                     <backgroundConfiguration key="background">
@@ -194,8 +194,10 @@
                     </view>
                     <connections>
                         <outlet property="countdownLabel" destination="wzC-Iy-Mnb" id="Xbb-PO-uS3"/>
-                        <outlet property="leftImage" destination="9PQ-ZS-x0P" id="kxu-Wt-tt9"/>
-                        <outlet property="rightImage" destination="TKj-th-DGE" id="Rdv-Vz-y8U"/>
+                        <outlet property="leftImg" destination="TKj-th-DGE" id="x5T-FX-4bQ"/>
+                        <outlet property="leftScoreLabel" destination="NYF-at-Bgc" id="YSr-dQ-9UW"/>
+                        <outlet property="rightImg" destination="9PQ-ZS-x0P" id="qfx-49-knZ"/>
+                        <outlet property="rightScoreLabel" destination="zX9-aS-yM0" id="2fb-SU-dd4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q2n-Hs-J6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

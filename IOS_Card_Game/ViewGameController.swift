@@ -8,22 +8,40 @@ class ViewGameController : UIViewController {
     
     private var rightScore = 0
     private var leftScore = 0
-    var countdownTimer: Timer?
-    var countdownValue = 5
+    
+    private var cards:[String] = ["rock.jpeg", "paper.jpeg", "scissors.jpeg"]
+    
+    var currentLoop = 0
+    var currentCount = 5
+    var timer: Timer?
+    //var countdownValue = 5
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        startCountdown(seconds: 5)
-        setImgSource(imgObj: rightImage, imgName: "rock.jpeg")
+        //startGame()
+        //startCountdown(seconds: 5)
+        //startCountdown(seconds: 5)
+        closeCards()
+        startCounting()
+        
     }
+
     
-    @IBOutlet weak var rightImage: UIImageView!
-    
-    @IBOutlet weak var leftImage: UIImageView!
-    
-    
+    @IBOutlet weak var rightImg: UIImageView!
+    @IBOutlet weak var leftImg: UIImageView!
+    @IBOutlet weak var rightScoreLabel: UILabel!
+    @IBOutlet weak var leftScoreLabel: UILabel!
     @IBOutlet weak var countdownLabel: UILabel!
+
+    private func closeCards(){
+        setImgSource(imgObj: rightImg, imgName: "card.jpeg")
+        setImgSource(imgObj: leftImg, imgName: "card.jpeg")
+    }
+    private func getRandomPictureName() -> String{
+        //let randomNumber = arc4random_uniform(3)
+        let randomInt = Int.random(in: 0...2)
+        return cards[randomInt]
+    }
     
     private func setImgSource(imgObj: UIImageView, imgName: String){
         if let image = UIImage(named: imgName){
@@ -33,31 +51,71 @@ class ViewGameController : UIViewController {
             print("Image was not found")
         }
     }
+    func startCounting() {
+        currentLoop = 0
+        updateCount()
+    }
     
-    func startCountdown(seconds: Int) {
-        countdownValue = seconds
-        countdownLabel.text = String(countdownValue)
-            
-        countdownTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
-                guard let self = self else { return }
-                
-                self.countdownValue -= 1
-                
-                if self.countdownValue >= 0 {
-                    self.countdownLabel.text = String(self.countdownValue)
-                } else {
-                    self.stopCountdown()
-                    
-                    if(seconds == 5) {
-                        startCountdown(seconds: 3)
-                    }
-                    
-                }
+    private func updateScore(left: String, right: String){
+        if(left == "rock.jpeg"){
+            if(right == "paper.jpeg"){
+                rightScore+=1
+            }
+            else if(right == "scissors.jpeg"){
+                leftScore+=1
+            }
         }
+        else if(left == "paper.jpeg"){
+            if(right == "rock.jpeg"){
+                leftScore+=1
+            }
+            else if(right == "scissors.jpeg"){
+                rightScore+=1
+            }
+        }
+        //Scissors
+        else{
+            if(right == "rock.jpeg"){
+                rightScore+=1
+            }
+            else if(right == "paper.jpeg"){
+                leftScore+=1
+            }
+        }
+        //print(rightScore)
+        rightScoreLabel.text = String(rightScore)
+        leftScoreLabel.text = String(leftScore)
         
     }
         
-        func stopCountdown() {
-            countdownTimer?.invalidate()
-            countdownTimer = nil
-        }}
+        func updateCount() {
+            if currentCount >= 0 {
+                countdownLabel.text = "\(currentCount)"
+                currentCount -= 1
+            } else {
+                currentLoop += 1
+                if currentLoop < 10 {
+                    if currentLoop % 2 == 0 {
+                        currentCount = 5
+                        closeCards()
+                    } else {
+                        let newPicLeft = getRandomPictureName()
+                        let newPicRight = getRandomPictureName()
+                        updateScore(left: newPicLeft, right: newPicRight)
+                        print("Right: " + newPicRight + " , left:" + newPicLeft)
+                        setImgSource(imgObj: leftImg, imgName: newPicLeft)
+                        setImgSource(imgObj: rightImg, imgName: newPicRight)
+                        currentCount = 3
+                    }
+                } else {
+                    countdownLabel.text = "Counting Complete"
+                    return
+                }
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.updateCount()
+            }
+        }
+        
+        }
