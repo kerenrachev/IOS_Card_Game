@@ -26,7 +26,9 @@ class ViewGameController : UIViewController {
         
     }
 
+    @IBOutlet weak var rightNameLabel: UILabel!
     
+    @IBOutlet weak var leftNameLabel: UILabel!
     @IBOutlet weak var rightImg: UIImageView!
     @IBOutlet weak var leftImg: UIImageView!
     @IBOutlet weak var rightScoreLabel: UILabel!
@@ -108,7 +110,21 @@ class ViewGameController : UIViewController {
                         currentCount = 3
                     }
                 } else {
-                    countdownLabel.text = "Counting Complete"
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let anotherViewController = storyBoard.instantiateViewController(withIdentifier: "endGameController") as! EndGameViewController
+                    if(rightScore>leftScore){
+                        anotherViewController.winner=rightNameLabel.text!
+                        anotherViewController.score=rightScoreLabel.text!
+                    }
+                    else if(rightScore<leftScore){
+                        anotherViewController.winner=leftNameLabel.text!
+                        anotherViewController.score=leftScoreLabel.text!
+                    }
+                    else{
+                        anotherViewController.winner="PC"
+                        anotherViewController.score=rightScoreLabel.text!
+                    }
+                    present(anotherViewController, animated: true)
                     return
                 }
             }

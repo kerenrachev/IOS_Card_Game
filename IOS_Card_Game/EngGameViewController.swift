@@ -7,14 +7,21 @@
 import UIKit
 import Foundation
 
-class GameViewController : UIViewController {
+class EndGameViewController : UIViewController {
     
+    var winner = ""
+    var score = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print("Bla bla")
         
+        winnerLabel.text = "Winner is: " + winner
+        scoreLabel.text = "Score is: " + score
+        
     }
     
+    @IBOutlet weak var winnerLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
 }
