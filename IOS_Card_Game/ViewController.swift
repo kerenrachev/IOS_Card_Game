@@ -41,6 +41,7 @@ class ViewController: UIViewController {
             heyNameLabel.text = "Hey," + userNameSaved
             
             getLocation()
+            StartButton.isHidden = false
         }
         else{
             hideAllElements()
@@ -55,7 +56,7 @@ class ViewController: UIViewController {
         EnterName.isHidden = true
         insertName.isHidden = true
         SubmitNameButton.isHidden = true
-        
+        StartButton.isHidden = true
     }
     
     @objc private func initiateClickListeners(){
@@ -74,6 +75,7 @@ class ViewController: UIViewController {
    
     @objc func submitButtonClicked(){
         processText()
+        StartButton.isHidden = false
         //leftEart.alpha = 1.0
     }
     
