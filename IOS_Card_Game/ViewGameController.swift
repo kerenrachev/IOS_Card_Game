@@ -8,7 +8,8 @@ class ViewGameController : UIViewController {
     
     private var rightScore = 0
     private var leftScore = 0
-    
+    var rightName = ""
+    var leftName = ""
     private var cards:[String] = ["rock.jpeg", "paper.jpeg", "scissors.jpeg"]
     
     var currentLoop = 0
@@ -18,9 +19,8 @@ class ViewGameController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //startGame()
-        //startCountdown(seconds: 5)
-        //startCountdown(seconds: 5)
+        rightNameLabel.text = rightName
+        leftNameLabel.text = leftName
         closeCards()
         startCounting()
         

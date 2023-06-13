@@ -149,8 +149,8 @@
                         <outlet property="SubmitNameButton" destination="jbb-WQ-l0F" id="dAo-R1-nNp"/>
                         <outlet property="heyNameLabel" destination="PZh-Yf-6H8" id="gaZ-DT-7iP"/>
                         <outlet property="insertName" destination="uIb-s8-Vau" id="N9z-8i-oxN"/>
-                        <outlet property="leftEart" destination="Ibk-8X-NAt" id="ZpM-qs-Vil"/>
-                        <outlet property="rightEart" destination="lkQ-Px-tDY" id="UPh-fG-jnm"/>
+                        <outlet property="leftEarth" destination="Ibk-8X-NAt" id="A0w-Hy-sY2"/>
+                        <outlet property="rightEarth" destination="lkQ-Px-tDY" id="0vL-gd-gCP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

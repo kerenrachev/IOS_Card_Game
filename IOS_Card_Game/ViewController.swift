@@ -7,8 +7,10 @@
 
 import UIKit
 import Foundation
+import CoreLocation
 class ViewController: UIViewController {
     
+    private final var LONGITUTE = 34.817549168324334
     //private String name;
     //private final double lng;
     
@@ -22,9 +24,9 @@ class ViewController: UIViewController {
     
     }
     
+    @IBOutlet weak var leftEarth: UIImageView!
     
-    @IBOutlet weak var leftEart: UIImageView!
-    @IBOutlet weak var rightEart: UIImageView!
+    @IBOutlet weak var rightEarth: UIImageView!
     @IBOutlet weak var EnterName: UITextField!
     @IBOutlet weak var insertName: UILabel!
     @IBOutlet weak var heyNameLabel: UILabel!
@@ -44,14 +46,15 @@ class ViewController: UIViewController {
             StartButton.isHidden = false
         }
         else{
+            getLocation()
             hideAllElements()
             insertName.isHidden = false
         }
     }
     
     private func hideAllElements(){
-        leftEart.alpha = 0.0
-        rightEart.alpha = 0.0
+        leftEarth.alpha = 0.0
+        rightEarth.alpha = 0.0
         heyNameLabel.isHidden = true
         EnterName.isHidden = true
         insertName.isHidden = true
@@ -76,6 +79,7 @@ class ViewController: UIViewController {
     @objc func submitButtonClicked(){
         processText()
         StartButton.isHidden = false
+        getLocation()
         //leftEart.alpha = 1.0
     }
     
@@ -99,12 +103,24 @@ class ViewController: UIViewController {
     }
     
     private func getLocation(){
-        if let currentLocation = LocationManager.shared.currentLocation {
-                    // Use the currentLocation here
-                    print("Current location: \(currentLocation)")
-        } else{
-            print("FUCK YOU BIITCH GO TO SLLEEP")
+        let locationManager = CLLocationManager()
+        locationManager.requestWhenInUseAuthorization()
+        
+        if (CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways)
+        {
             
+            let curr_lng = locationManager.location!.coordinate.longitude
+            if(curr_lng < LONGITUTE){
+                print("Smaller")
+                leftEarth.alpha = 1.0
+            }
+            else{
+                print("BIGGER")
+                rightEarth.alpha = 1.0
+            }
+        }
+        else{
+            print("Please allow location to use the application!")
         }
         
     }

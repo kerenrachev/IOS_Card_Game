@@ -4,26 +4,39 @@ import Foundation
 import CoreLocation
 
 class LocationManager: NSObject, CLLocationManagerDelegate {
-    static let shared = LocationManager()
-    private let locationManager = CLLocationManager()
+
+    var locationManager: CLLocationManager!
     
     var currentLocation: CLLocation?
     
-    private override init() {
-        super.init()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-    }
+    // Just call setupLocationManager() in didFinishLaunchingWithOption.
+
+        func setupLocationManager(){
+                locationManager = CLLocationManager()
+                locationManager?.delegate = self
+                self.locationManager?.requestAlwaysAuthorization()
+                locationManager?.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+                locationManager?.startUpdatingLocation()
+
+            }
+
+        // Below method will provide you current location.
+         func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+
+                if currentLocation == nil {
+                    currentLocation = locations.last
+                    locationManager?.stopMonitoringSignificantLocationChanges()
+                    let locationValue:CLLocationCoordinate2D = manager.location!.coordinate
+
+                    print("locations = \(locationValue)")
+
+                    locationManager?.stopUpdatingLocation()
+                }
+            }
+
+        // Below Mehtod will print error if not able to update location.
+            func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+                print("Error")
+            }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-        currentLocation = location
-        
-        // Save to UserDefaults (Shared Preferences)
-        let defaults = UserDefaults.standard
-        defaults.set(location.coordinate.latitude, forKey: "latitude")
-        defaults.set(location.coordinate.longitude, forKey: "longitude")
-    }
 }
