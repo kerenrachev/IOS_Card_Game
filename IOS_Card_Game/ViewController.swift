@@ -11,6 +11,9 @@ import CoreLocation
 class ViewController: UIViewController {
     
     private final var LONGITUTE = 34.817549168324334
+    private var rightName = "";
+    private var leftName = ""
+    private var userName: String!
     //private String name;
     //private final double lng;
     
@@ -18,8 +21,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         readNameFromSharedPreferences(input: "username")
-        //hideInitialElements()
-       
         initiateClickListeners()
     
     }
@@ -41,7 +42,7 @@ class ViewController: UIViewController {
             hideAllElements()
             heyNameLabel.isHidden = false
             heyNameLabel.text = "Hey," + userNameSaved
-            
+            userName = userNameSaved
             getLocation()
             StartButton.isHidden = false
         }
@@ -67,6 +68,7 @@ class ViewController: UIViewController {
         let tapGesRecognizer = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
         insertName.addGestureRecognizer(tapGesRecognizer)
         SubmitNameButton.addTarget(self, action: #selector(submitButtonClicked), for: .touchUpInside)
+        StartButton.addTarget(self, action: #selector(startGame), for: .touchUpInside)
         
     }
     
@@ -83,6 +85,16 @@ class ViewController: UIViewController {
         //leftEart.alpha = 1.0
     }
     
+    @objc func startGame(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let gameController = storyBoard.instantiateViewController(withIdentifier: "cardGameController") as! ViewGameController
+        
+        gameController.rightName = rightName
+        gameController.leftName = leftName
+        present(gameController, animated: true)
+        
+    }
+    
     private func processText(){
         if let enteredText = EnterName.text{
             let name = enteredText
@@ -90,6 +102,7 @@ class ViewController: UIViewController {
             SubmitNameButton.isHidden = true
             heyNameLabel.isHidden = false
             heyNameLabel.text = "Hey, " + name
+            userName = name
             saveInSharedPreferences(key: "username", input: name)
             
         }
@@ -111,12 +124,14 @@ class ViewController: UIViewController {
             
             let curr_lng = locationManager.location!.coordinate.longitude
             if(curr_lng < LONGITUTE){
-                print("Smaller")
                 leftEarth.alpha = 1.0
+                leftName = userName
+                rightName = "PC"
             }
             else{
-                print("BIGGER")
                 rightEarth.alpha = 1.0
+                rightName = userName
+                leftName = "PC"
             }
         }
         else{
@@ -124,5 +139,5 @@ class ViewController: UIViewController {
         }
         
     }
-    
+     
 }

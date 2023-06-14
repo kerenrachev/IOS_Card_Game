@@ -19,9 +19,9 @@
 		CD3E762F2A30E5EE00AFCF94 /* EngGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3E762E2A30E5EE00AFCF94 /* EngGameViewController.swift */; };
 		CD3E76312A30EA0E00AFCF94 /* ViewGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3E76302A30EA0E00AFCF94 /* ViewGameController.swift */; };
 		CD3E76392A30F3F200AFCF94 /* timer.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CD3E76382A30F3F200AFCF94 /* timer.jpeg */; };
-		CD3E763D2A32010C00AFCF94 /* scissors.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CD3E763A2A32010C00AFCF94 /* scissors.jpeg */; };
-		CD3E763E2A32010C00AFCF94 /* paper.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CD3E763B2A32010C00AFCF94 /* paper.jpeg */; };
-		CD3E763F2A32010C00AFCF94 /* rock.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CD3E763C2A32010C00AFCF94 /* rock.jpeg */; };
+		CDEF6B8F2A39ED1100898169 /* rock.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CDEF6B8C2A39ED1000898169 /* rock.jpeg */; };
+		CDEF6B902A39ED1100898169 /* paper.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CDEF6B8D2A39ED1000898169 /* paper.jpeg */; };
+		CDEF6B912A39ED1100898169 /* scissors.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CDEF6B8E2A39ED1100898169 /* scissors.jpeg */; };
 		CDFEB9AC2A320E6000385585 /* card.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CDFEB9AB2A320E6000385585 /* card.jpeg */; };
 /* End PBXBuildFile section */
 
@@ -40,9 +40,9 @@
 		CD3E762E2A30E5EE00AFCF94 /* EngGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngGameViewController.swift; sourceTree = "<group>"; };
 		CD3E76302A30EA0E00AFCF94 /* ViewGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGameController.swift; sourceTree = "<group>"; };
 		CD3E76382A30F3F200AFCF94 /* timer.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timer.jpeg; sourceTree = "<group>"; };
-		CD3E763A2A32010C00AFCF94 /* scissors.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = scissors.jpeg; path = ../../../Downloads/scissors.jpeg; sourceTree = "<group>"; };
-		CD3E763B2A32010C00AFCF94 /* paper.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = paper.jpeg; path = ../../../Downloads/paper.jpeg; sourceTree = "<group>"; };
-		CD3E763C2A32010C00AFCF94 /* rock.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rock.jpeg; path = ../../../Downloads/rock.jpeg; sourceTree = "<group>"; };
+		CDEF6B8C2A39ED1000898169 /* rock.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rock.jpeg; sourceTree = "<group>"; };
+		CDEF6B8D2A39ED1000898169 /* paper.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper.jpeg; sourceTree = "<group>"; };
+		CDEF6B8E2A39ED1100898169 /* scissors.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scissors.jpeg; sourceTree = "<group>"; };
 		CDFEB9AB2A320E6000385585 /* card.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = card.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,10 +81,10 @@
 				CD3E76182A3082F600AFCF94 /* ViewController.swift */,
 				CD3E761A2A3082F600AFCF94 /* Main.storyboard */,
 				CD3E76382A30F3F200AFCF94 /* timer.jpeg */,
-				CD3E763B2A32010C00AFCF94 /* paper.jpeg */,
-				CD3E763C2A32010C00AFCF94 /* rock.jpeg */,
-				CD3E763A2A32010C00AFCF94 /* scissors.jpeg */,
 				CD3E761D2A3082F700AFCF94 /* Assets.xcassets */,
+				CDEF6B8D2A39ED1000898169 /* paper.jpeg */,
+				CDEF6B8C2A39ED1000898169 /* rock.jpeg */,
+				CDEF6B8E2A39ED1100898169 /* scissors.jpeg */,
 				CD3E76282A30A2EA00AFCF94 /* right.jpeg */,
 				CDFEB9AB2A320E6000385585 /* card.jpeg */,
 				CD3E762A2A30A37E00AFCF94 /* left.jpeg */,
@@ -155,16 +155,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD3E763F2A32010C00AFCF94 /* rock.jpeg in Resources */,
-				CD3E763E2A32010C00AFCF94 /* paper.jpeg in Resources */,
 				CD3E76292A30A2EA00AFCF94 /* right.jpeg in Resources */,
 				CD3E762B2A30A37E00AFCF94 /* left.jpeg in Resources */,
 				CD3E76212A3082F700AFCF94 /* LaunchScreen.storyboard in Resources */,
 				CDFEB9AC2A320E6000385585 /* card.jpeg in Resources */,
+				CDEF6B902A39ED1100898169 /* paper.jpeg in Resources */,
+				CDEF6B8F2A39ED1100898169 /* rock.jpeg in Resources */,
 				CD3E76392A30F3F200AFCF94 /* timer.jpeg in Resources */,
 				CD3E761E2A3082F700AFCF94 /* Assets.xcassets in Resources */,
+				CDEF6B912A39ED1100898169 /* scissors.jpeg in Resources */,
 				CD3E761C2A3082F600AFCF94 /* Main.storyboard in Resources */,
-				CD3E763D2A32010C00AFCF94 /* scissors.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

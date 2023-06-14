@@ -19,6 +19,7 @@ class ViewGameController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Right name: " + rightName)
         rightNameLabel.text = rightName
         leftNameLabel.text = leftName
         closeCards()
@@ -27,7 +28,6 @@ class ViewGameController : UIViewController {
     }
 
     @IBOutlet weak var rightNameLabel: UILabel!
-    
     @IBOutlet weak var leftNameLabel: UILabel!
     @IBOutlet weak var rightImg: UIImageView!
     @IBOutlet weak var leftImg: UIImageView!
@@ -104,7 +104,7 @@ class ViewGameController : UIViewController {
                         let newPicLeft = getRandomPictureName()
                         let newPicRight = getRandomPictureName()
                         updateScore(left: newPicLeft, right: newPicRight)
-                        print("Right: " + newPicRight + " , left:" + newPicLeft)
+                        
                         setImgSource(imgObj: leftImg, imgName: newPicLeft)
                         setImgSource(imgObj: rightImg, imgName: newPicRight)
                         currentCount = 3
