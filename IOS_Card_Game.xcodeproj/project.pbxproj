@@ -22,6 +22,7 @@
 		CDEF6B8F2A39ED1100898169 /* rock.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CDEF6B8C2A39ED1000898169 /* rock.jpeg */; };
 		CDEF6B902A39ED1100898169 /* paper.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CDEF6B8D2A39ED1000898169 /* paper.jpeg */; };
 		CDEF6B912A39ED1100898169 /* scissors.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CDEF6B8E2A39ED1100898169 /* scissors.jpeg */; };
+		CDEF6B932A39FC5200898169 /* background.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CDEF6B922A39FC5200898169 /* background.jpeg */; };
 		CDFEB9AC2A320E6000385585 /* card.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CDFEB9AB2A320E6000385585 /* card.jpeg */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		CDEF6B8C2A39ED1000898169 /* rock.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rock.jpeg; sourceTree = "<group>"; };
 		CDEF6B8D2A39ED1000898169 /* paper.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper.jpeg; sourceTree = "<group>"; };
 		CDEF6B8E2A39ED1100898169 /* scissors.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scissors.jpeg; sourceTree = "<group>"; };
+		CDEF6B922A39FC5200898169 /* background.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpeg; sourceTree = "<group>"; };
 		CDFEB9AB2A320E6000385585 /* card.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = card.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +85,7 @@
 				CD3E76382A30F3F200AFCF94 /* timer.jpeg */,
 				CD3E761D2A3082F700AFCF94 /* Assets.xcassets */,
 				CDEF6B8D2A39ED1000898169 /* paper.jpeg */,
+				CDEF6B922A39FC5200898169 /* background.jpeg */,
 				CDEF6B8C2A39ED1000898169 /* rock.jpeg */,
 				CDEF6B8E2A39ED1100898169 /* scissors.jpeg */,
 				CD3E76282A30A2EA00AFCF94 /* right.jpeg */,
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD3E76292A30A2EA00AFCF94 /* right.jpeg in Resources */,
+				CDEF6B932A39FC5200898169 /* background.jpeg in Resources */,
 				CD3E762B2A30A37E00AFCF94 /* left.jpeg in Resources */,
 				CD3E76212A3082F700AFCF94 /* LaunchScreen.storyboard in Resources */,
 				CDFEB9AC2A320E6000385585 /* card.jpeg in Resources */,
